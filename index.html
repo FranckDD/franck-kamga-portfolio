@@ -1,1 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Franck Donald KAMGA</title>
+  <meta name="description" content="Portfolio de Franck Donald KAMGA — Développeur Full‑Stack, Architecte Logiciel, Consultant" />
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#0A68A4; --text:#0f1720; --muted:#6b7280;
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .left{display:flex;gap:20px;align-items:center}
+    .avatar{width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2aa0d6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px}
+    h1{margin:0;font-size:22px}
+    .tag{color:var(--muted);font-size:14px}
+    .lead{margin-top:12px;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:320px 1fr;gap:24px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(11,22,36,0.04)}
+    .sidebar .section{margin-bottom:14px}
+    .section h3{margin:0 0 8px 0;font-size:15px;color:var(--accent)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef6fb;padding:6px 8px;border-radius:8px;font-size:13px;color:var(--accent)}
+
+    .content h2{margin-top:0}
+    .project{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #f0f3f6}
+    .project h4{margin:0}
+    .links{margin-top:8px}
+    a.link{color:var(--accent);text-decoration:none}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    .lang-switch{display:flex;gap:8px}
+    .lang-btn{border:1px solid #e6eef6;background:#fff;padding:6px 8px;border-radius:8px;cursor:pointer}
+    .lang-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    /* responsive */
+    @media (max-width:900px){main{grid-template-columns:1fr;}.avatar{width:64px;height:64px;font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <div class="avatar">FD</div>
+        <div>
+          <h1 data-lang="fr">Franck Donald KAMGA</h1>
+          <div class="tag" data-lang="fr">Développeur Full‑Stack • Architecte Logiciel • Consultant</div>
+          <div class="lead" data-lang="fr">Disponible pour Freelance, Consulting & CDI — Spécialités : SIH, SaaS, Microservices, Vue.js, FastAPI, PyQt6</div>
+
+          <h1 style="display:none" data-lang="en">Franck Donald KAMGA</h1>
+          <div class="tag" style="display:none" data-lang="en">Full‑Stack Developer • Software Architect • Tech Consultant</div>
+          <div class="lead" style="display:none" data-lang="en">Available for Freelance, Consulting & Full‑time — Specialties: HIS, SaaS, Microservices, Vue.js, FastAPI, PyQt6</div>
+        </div>
+      </div>
+
+      <div class="lang-switch">
+        <button class="lang-btn" id="btn-fr">FR</button>
+        <button class="lang-btn" id="btn-en">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <div class="card section">
+          <h3 data-lang="fr">Contact</h3>
+          <h3 style="display:none" data-lang="en">Contact</h3>
+          <p>
+            <strong data-lang="fr">Email : </strong><span id="email">motadjefranckdonald@gmail.com</span><br>
+            <strong data-lang="fr">Téléphone : </strong><span id="phone">+237 674 69 79 08</span><br>
+            <strong data-lang="fr">Localisation : Yaoundé</strong>Cameroun
+
+            <strong style="display:none" data-lang="en">Email : </strong><span style="display:none" data-lang="en">motadjefranckdonald@gmail.com</span><br>
+            <strong style="display:none" data-lang="en">Phone : </strong><span style="display:none" data-lang="en">+237 674 69 79 08</span><br>
+            <strong style="display:none" data-lang="en">Location :Yaounde </strong><span style="display:none" data-lang="en">Cameroon</span>
+          </p>
+        </div>
+
+        <div class="card section">
+          <h3 data-lang="fr">Compétences clés</h3>
+          <h3 style="display:none" data-lang="en">Core Skills</h3>
+          <div class="skills">
+            <span class="skill">Architecture logicielle</span>
+            <span class="skill">Microservices</span>
+            <span class="skill">Python / FastAPI</span>
+            <span class="skill">Vue.js</span>
+            <span class="skill">PyQt6</span>
+            <span class="skill">WordPress</span>
+            <span class="skill">DevOps / CI‑CD</span>
+            <span class="skill">Audit AWS</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3 data-lang="fr">Formation</h3>
+          <h3 style="display:none" data-lang="en">Education</h3>
+          <p data-lang="fr">Master Professionnel en SIGL<br>Licence en SIGL</p>
+          <p style="display:none" data-lang="en">Professional Master in Information Systems & Software Engineering (SIGL)<br>Bachelor in Information Systems & Software Engineering (SIGL)</p>
+        </div>
+
+        <div class="card section">
+          <h3 data-lang="fr">Soft skills</h3>
+          <h3 style="display:none" data-lang="en">Soft skills</h3>
+          <ul>
+            <li data-lang="fr">Curiosité & apprentissage continu</li>
+            <li data-lang="fr">Leadership & gestion d'équipes</li>
+            <li data-lang="fr">Gestion de ressources & planning</li>
+            <li data-lang="fr">Rigueur, autonomie, esprit produit</li>
+
+            <li style="display:none" data-lang="en">Curiosity & continuous learning</li>
+            <li style="display:none" data-lang="en">Leadership & team management</li>
+            <li style="display:none" data-lang="en">Resource & planning management</li>
+            <li style="display:none" data-lang="en">Discipline, autonomy, product mindset</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3 data-lang="fr">Télécharger</h3>
+          <h3 style="display:none" data-lang="en">Download</h3>
+          <p><a class="link" href="/Portfolio_Franck_Kamga.pdf" download data-lang="fr">Télécharger le PDF du portfolio</a>
+          <a class="link" href="/Portfolio_Franck_Kamga.pdf" download style="display:none" data-lang="en">Download portfolio PDF</a></p>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="card">
+          <h2 data-lang="fr">Présentation</h2>
+          <h2 style="display:none" data-lang="en">About</h2>
+          <p data-lang="fr">Développeur Full‑Stack et Architecte Logiciel avec une double formation en Licence et Master Professionnel en SIGL. Passionné, curieux et motivé par l’apprentissage continu, j’aime concevoir des systèmes robustes, performants et parfaitement structurés.</p>
+          <p style="display:none" data-lang="en">Full‑Stack Developer and Software Architect with a Bachelor's and Professional Master's degree in Information Systems & Software Engineering (SIGL). Passionate, curious and driven by continuous learning, I design robust, performant and well‑structured systems.</p>
+
+          <p data-lang="fr">J'interviens sur l'analyse, la conception, l'architecture, le développement, l'optimisation, la documentation et le DevOps/CI‑CD. Mes réalisations vont du site vitrine aux plateformes SaaS et systèmes d'information complets.</p>
+          <p style="display:none" data-lang="en">I work across analysis, design, architecture, development, optimization, documentation and DevOps/CI‑CD. My work ranges from static websites to SaaS platforms and full information systems.</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 data-lang="fr">Projets majeurs</h2>
+          <h2 style="display:none" data-lang="en">Key Projects</h2>
+
+          <div class="project">
+            <h4 data-lang="fr">Glostone‑Kare — Système d’Information Hospitalier (SIH)</h4>
+            <h4 style="display:none" data-lang="en">Glostone‑Kare — Hospital Information System (HIS)</h4>
+            <p data-lang="fr"><strong>Rôle :</strong> Architecte Logiciel & Lead Développeur</p>
+            <p style="display:none" data-lang="en"><strong>Role:</strong> Software Architect & Lead Developer</p>
+            <p data-lang="fr">Stack : Backend Python (FastAPI), Admin Web (Vue.js), Application Desktop (PyQt6), PostgreSQL.</p>
+            <p style="display:none" data-lang="en">Stack: Python backend (FastAPI), Admin Web (Vue.js), Desktop Application (PyQt6), PostgreSQL.</p>
+            <p data-lang="fr">Modules principaux : gestion patients, dossier médical, laboratoire (génération automatique de codes labo), pharmacie, caisse, tableau de bord KPI, authentification multi‑rôles.</p>
+            <p style="display:none" data-lang="en">Main modules: patient management, medical records, laboratory (automatic lab code generation), pharmacy, cash register, KPI dashboards, multi‑role authentication.</p>
+            <p data-lang="fr"><em>Statut :</em> Projet terminé — en attente du déploiement par le centre de santé.</p>
+            <p style="display:none" data-lang="en"><em>Status:</em> Project completed — awaiting deployment by the health center.</p>
+          </div>
+
+          <div class="project">
+            <h4 data-lang="fr">PerkFlow — Plateforme SaaS RH & Performance</h4>
+            <h4 style="display:none" data-lang="en">PerkFlow — SaaS HR & Performance Platform</h4>
+            <p data-lang="fr"><strong>Rôle :</strong> Architecte, Concepteur & Consultant Tech Senior</p>
+            <p style="display:none" data-lang="en"><strong>Role:</strong> Architect, Designer & Senior Tech Consultant</p>
+            <p data-lang="fr">J'ai rédigé le cahier des charges, conçu l'architecture globale, défini la stack technique, optimisé les flows et éliminé les goulots d'étranglement avant le recrutement des développeurs.</p>
+            <p style="display:none" data-lang="en">I authored the requirements specification, designed the overall architecture, defined the tech stack, optimized flows and removed bottlenecks before recruiting the development team.</p>
+            <p data-lang="fr">Site : <a class="link" href="https://perkflow.io/" target="_blank">https://perkflow.io/</a></p>
+            <p style="display:none" data-lang="en">Website: <a class="link" href="https://perkflow.io/" target="_blank">https://perkflow.io/</a></p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 data-lang="fr">Sites WordPress & Landing pages</h2>
+          <h2 style="display:none" data-lang="en">WordPress Sites & Landing Pages</h2>
+          <p data-lang="fr">Réalisation de plusieurs sites vitrines et landing pages pendant mes études et débuts professionnels.</p>
+          <p style="display:none" data-lang="en">Built several professional landing pages and brochure sites during my studies and early professional work.</p>
+          <ul>
+            <li><a class="link" href="https://sercobtp.com/" target="_blank">sercobtp.com</a></li>
+            <li><a class="link" href="https://blusky.bar/" target="_blank">blusky.bar</a></li>
+            <li><a class="link" href="https://dimounconsulting.com/" target="_blank">dimounconsulting.com</a></li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 data-lang="fr">Compétences techniques</h2>
+          <h2 style="display:none" data-lang="en">Technical Skills</h2>
+          <div class="grid-2">
+            <div>
+              <p data-lang="fr"><strong>Langages :</strong> Python, JavaScript, PHP, SQL, HTML/CSS</p>
+              <p style="display:none" data-lang="en"><strong>Languages:</strong> Python, JavaScript, PHP, SQL, HTML/CSS</p>
+              <p data-lang="fr"><strong>Frameworks :</strong> FastAPI, Flask, Vue.js, PyQt6, WordPress</p>
+              <p style="display:none" data-lang="en"><strong>Frameworks:</strong> FastAPI, Flask, Vue.js, PyQt6, WordPress</p>
+              <p data-lang="fr"><strong>Bases :</strong> PostgreSQL (avancé), MySQL</p>
+              <p style="display:none" data-lang="en"><strong>DB:</strong> PostgreSQL (advanced), MySQL</p>
+            </div>
+            <div>
+              <p data-lang="fr"><strong>Outils :</strong> Docker, Git, GitHub Actions, Nginx</p>
+              <p style="display:none" data-lang="en"><strong>Tools:</strong> Docker, Git, GitHub Actions, Nginx</p>
+              <p data-lang="fr"><strong>Cloud :</strong> AWS (IAM, EC2, VPC, RDS)</p>
+              <p style="display:none" data-lang="en"><strong>Cloud:</strong> AWS (IAM, EC2, VPC, RDS)</p>
+              <p data-lang="fr"><strong>Autres :</strong> Audit technique, conception UML, microservices, CI/CD</p>
+              <p style="display:none" data-lang="en"><strong>Other:</strong> Technical audits, UML design, microservices, CI/CD</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 data-lang="fr">Management & Leadership</h2>
+          <h2 style="display:none" data-lang="en">Management & Leadership</h2>
+          <p data-lang="fr">Très bon manager et gestionnaire de ressources : j'encadre les équipes techniques, organise les sprints, répartis les tâches selon les compétences, et assure la montée en compétences des développeurs.</p>
+          <p style="display:none" data-lang="en">Strong manager and resource manager: I mentor technical teams, organize sprints, distribute tasks based on skills, and ensure developers' skill growth.</p>
+          <p data-lang="fr">Compétences managériales : recrutement technique, mentoring, planification des ressources, suivi KPIs, reporting au client.</p>
+          <p style="display:none" data-lang="en">Management skills: technical recruitment, mentoring, resource planning, KPI tracking, client reporting.</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 data-lang="fr">Disponibilités & contact</h2>
+          <h2 style="display:none" data-lang="en">Availability & contact</h2>
+          <p data-lang="fr">Disponible pour missions freelance, consulting et postes en CDI. Pour obtenir mon CV, une proposition commerciale ou discuter d'un projet, contactez‑moi via email ou téléphone (remplacer les placeholders dans la partie contact).</p>
+          <p style="display:none" data-lang="en">Available for freelance missions, consulting and full‑time roles. To request my CV, a commercial proposal or discuss a project, contact me via email or phone (replace the placeholders in the contact section).</p>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Franck Donald KAMGA — Portfolio
+    </footer>
+  </div>
+
+  <script>
+    // Language switcher
+    const setLang = (lang) => {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        if(el.getAttribute('data-lang') === lang) { el.style.display = ''; }
+        else { el.style.display = 'none'; }
+      });
+      localStorage.setItem('lang', lang);
+      document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    }
+
+    document.getElementById('btn-fr').addEventListener('click', () => setLang('fr'));
+    document.getElementById('btn-en').addEventListener('click', () => setLang('en'));
+
+    // initialize based on localStorage or browser default
+    const preferred = localStorage.getItem('lang') || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'fr');
+    setLang(preferred);
+
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Replace contact placeholders easily (edit in HTML or use query params)
+    (function(){
+      const url = new URL(window.location.href);
+      if(url.searchParams.get('email')) document.getElementById('email').textContent = url.searchParams.get('email');
+      if(url.searchParams.get('phone')) document.getElementById('phone').textContent = url.searchParams.get('phone');
+    })();
+  </script>
+</body>
+</html>
 
